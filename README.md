@@ -59,6 +59,14 @@ CSV 数据记录与导出
 - ESP32-C3 DevKit
 - Python 3，用于本地仿真演示
 
+建议将工程放在不含空格的路径下，例如：
+
+```text
+H:\esp32c3-mlx90640-thermal-camera
+```
+
+PlatformIO / ESP-IDF 在包含空格的路径中可能出现 CMake 配置失败。
+
 PlatformIO 配置位于：
 
 ```ini
@@ -165,3 +173,17 @@ http://127.0.0.1:8000
 
 本项目使用 MIT License。项目整理、文档与课程展示说明由 **rdfrdream** 维护。部分 MLX90640 驱动与基础代码参考开源项目和芯片示例库，详见 `NOTICE.md`。
 
+## GitHub 发布参考
+
+如果本机已安装并登录 GitHub CLI，可以在项目根目录执行：
+
+```powershell
+gh repo create rdfrdream/esp32c3-mlx90640-thermal-camera --public --source . --remote origin --push
+```
+
+如果已经在 GitHub 网页端创建了空仓库，也可以执行：
+
+```powershell
+git remote add origin https://github.com/rdfrdream/esp32c3-mlx90640-thermal-camera.git
+git push -u origin main
+```
